@@ -62,4 +62,5 @@ HEALTHCHECK --interval=60s --timeout=10s --start-period=5s --retries=5 \
   CMD curl -f http://localhost:7865/ || exit 1
 
 # Command to run the application with GPU support
-CMD ["python3", "acestep/gui.py", "--server_name", "0.0.0.0", "--torch_compile", "true", "--cpu_offload"]
+CMD ["python3", "acestep/gui.py", "--server_name", "0.0.0.0", "--torch_compile", "true", "--cpu_offload", "true"]
+#python3 acestep/gui.py --server_name 0.0.0.0 --torch_compile true --cpu_offload true
